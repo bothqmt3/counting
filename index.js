@@ -93,7 +93,7 @@ client.on("messageCreate", async (message) => {
         }
     }
 
-    if (message.channel.id !== '1248266414461157396') return;
+    if (message.channel.id !== '1219618661883445249') return;
 
     if (!games.has(message.channel.id)) {
         games.set(message.channel.id, new CountingGame(message.channel));
