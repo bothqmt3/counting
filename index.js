@@ -51,20 +51,7 @@ client.on("ready", () => {
 client.on("messageCreate", async (message) => {
     if (message.author.bot) return;
 
-    if (message.content.startsWith("~rd")) {
-        const args = message.content.split(" ");
-        if (args.length === 2) {
-            const maxNumber = parseInt(args[1]);
-            if (!isNaN(maxNumber)) {
-                const randomNumber = Math.floor(Math.random() * maxNumber) + 1;
-                const embed = new Discord.MessageEmbed()
-                    .setColor("#00ff00")
-                    .setDescription(`<@${message.author.id}>, Your Number Is: ${randomNumber}`);
-                message.channel.send({ embeds: [embed] });
-                return;
-            }
-        }
-    }
+    // The ~rd command has been moved to commands/rd.js
 
     if (message.channel.id !== '1248266414461157396') return;
 
